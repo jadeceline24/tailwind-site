@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('./images/bg-tablet-pattern.svg'), url('./images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 180% -10%, -130% center;
+    background-size: 700px;
+    max-width: 100%;
+    height: auto;
+}
+
+.banner{
+    background-image: url('./images/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+}
+.icon:hover path{
+    fill:hsl(12, 88%, 59%);
+}
+
+@media(max-width: 576px){
+    body{
+        background-position: -100% -5%, -300% 15%;
+        background-size: 500px;
+    }
+    .banner{
+        background-position: 45% -50%;
+    }
+    
+}
+@media(max-width: 768px){
+    .slide{
+        display: none;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply bg-brightRed p-3 px-10 text-white rounded-full hover:bg-hoverwhite font-medium
+    }
+    .circ{
+        @apply w-3 h-3 rounded-full bg-white border-brightRed border-2
+        hover:bg-brightRed cursor-pointer
+    }
+
+}
